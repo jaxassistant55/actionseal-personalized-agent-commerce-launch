@@ -1,0 +1,4 @@
+interface:
+  display_name: "ActionSeal Personalized Launch"
+  short_description: "Inspect and validate the ActionSeal x402 launch service"
+  default_prompt: "Use $actionseal-personalized-agent-commerce-launch to validate my public product facts and inspect the live x402 contract without signing or paying."

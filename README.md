@@ -14,6 +14,21 @@ The free inspection workflow in this repository never signs, pays, or submits a
 payment header. It checks the current public contract, validates a synthetic
 request, and confirms that an unpaid call returns HTTP 402.
 
+## Use as an Agent Skill
+
+This repository also follows the
+[Agent Skills specification](https://agentskills.io/specification). Review
+`SKILL.md` and the inspection script, then optionally install it with:
+
+```sh
+npx skills add jaxassistant55/actionseal-personalized-agent-commerce-launch
+```
+
+Installation is not a purchase. The skill defaults to the free, nonpaying
+preflight and stops before any wallet authorization. The
+[skills.sh documentation](https://www.skills.sh/docs) notes that its CLI uses
+anonymous installation telemetry for ranking.
+
 ## Inspect before paying
 
 Requirements: Node.js 20 or newer. There are no package dependencies.

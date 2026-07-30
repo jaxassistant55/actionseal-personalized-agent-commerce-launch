@@ -9,6 +9,11 @@ const request = JSON.parse(
   await readFile(new URL("examples/request.json", root), "utf8"),
 );
 const readme = await readFile(new URL("README.md", root), "utf8");
+const skill = await readFile(new URL("SKILL.md", root), "utf8");
+const openaiYaml = await readFile(
+  new URL("agents/openai.yaml", root),
+  "utf8",
+);
 const inspector = await readFile(
   new URL("scripts/inspect-live.mjs", root),
   "utf8",
@@ -80,4 +85,22 @@ test("the live inspector fails closed on validator and challenge drift", () => {
       `missing fail-closed assertion for ${requiredAssertion}`,
     );
   }
+});
+
+test("the Agent Skill defaults to a fail-closed nonpaying workflow", () => {
+  assert.match(
+    skill,
+    /^---\nname: actionseal-personalized-agent-commerce-launch\n/,
+  );
+  assert.match(skill, /Default to the nonpaying workflow\./);
+  assert.match(skill, /Never send a raw USDC transfer to `payTo`/);
+  assert.match(skill, /Proceed only when the user explicitly asks to buy/);
+  assert.match(
+    skill,
+    /This skill contains no wallet, signer, facilitator, or payment\nsubmission code\./,
+  );
+  assert.match(
+    openaiYaml,
+    /Use \$actionseal-personalized-agent-commerce-launch/,
+  );
 });
