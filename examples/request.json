@@ -1,0 +1,18 @@
+{
+  "productName": "ReceiptLens API",
+  "serviceDescription": "Returns a bounded machine-readable evidence report for a public x402 payment receipt, including route attribution and explicit verification caveats.",
+  "endpoint": "https://receipts.example.com/api/v1/report",
+  "method": "POST",
+  "priceUSDC": 4,
+  "payTo": "0x1111111111111111111111111111111111111111",
+  "primaryBuyer": "AI-agent operators who need a reviewable payment-evidence handoff",
+  "desiredOutcome": "Receive a structured receipt-evidence report with route attribution and explicit verification caveats",
+  "proofPoints": [
+    "The API returns a structured report with explicit evidence fields.",
+    "The service documents its exact x402 method, amount, network, and receiver."
+  ],
+  "limitations": [
+    "The report is technical evidence, not a legal or financial determination.",
+    "A successful response does not independently prove buyer identity."
+  ]
+}

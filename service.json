@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "lastVerifiedAt": "2026-07-30T18:41:32.899Z",
+  "name": "ActionSeal Personalized Agent Commerce Launch",
+  "description": "Turns bounded public facts for one paid agent service into 12 buyer-specific launch and machine-discovery files delivered inline.",
+  "buyerPage": "https://jax.tail5e0766.ts.net:8443/personalized-agent-commerce-launch",
+  "paidEndpoint": {
+    "url": "https://jax.tail5e0766.ts.net:8443/api/v1/personalized-agent-commerce-launch",
+    "method": "POST",
+    "contentType": "application/json",
+    "responseType": "application/json"
+  },
+  "freeInspection": {
+    "sample": "https://jax.tail5e0766.ts.net:8443/api/v1/personalized-agent-commerce-launch/sample",
+    "validator": {
+      "url": "https://jax.tail5e0766.ts.net:8443/api/v1/personalized-agent-commerce-launch/validate",
+      "method": "POST",
+      "requiresPayment": false,
+      "generatesDeliverable": false
+    },
+    "openapi": "https://jax.tail5e0766.ts.net:8443/openapi.json",
+    "x402Descriptor": "https://jax.tail5e0766.ts.net:8443/.well-known/x402",
+    "llms": "https://jax.tail5e0766.ts.net:8443/llms.txt",
+    "documentsScope": "The OpenAPI and x402 documents cover multiple ActionSeal products; select the exact personalized POST path."
+  },
+  "payment": {
+    "protocol": "x402",
+    "x402Version": 2,
+    "scheme": "exact",
+    "network": "eip155:8453",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "assetName": "USDC",
+    "amountAtomic": "20000000",
+    "priceUSDC": 20,
+    "payTo": "0x27520d6E2f9E3D1e6340F04Dfc4587a3E4f82268",
+    "liveChallengeIsAuthoritative": true,
+    "directTransfersFulfillCheckout": false
+  },
+  "delivery": {
+    "mode": "inline-files-v1",
+    "fileCount": 12,
+    "integrity": [
+      "per-file byte count",
+      "per-file SHA-256 digest",
+      "deterministic input SHA-256",
+      "deterministic bundle digest"
+    ],
+    "files": [
+      "README.md",
+      "product-brief.md",
+      "landing-page.md",
+      "marketplace-listing.md",
+      "llms.txt",
+      ".well-known/agent.json",
+      ".well-known/x402.json",
+      "openapi-fragment.json",
+      "buyer-qualification.md",
+      "claims-review.md",
+      "IMPLEMENTATION-NOTES.md",
+      "validation-report.json"
+    ]
+  },
+  "boundaries": [
+    "Public product facts only",
+    "No URL fetching",
+    "No deployment or marketplace registration",
+    "No credential use",
+    "No signing on the buyer's behalf",
+    "No demand, sales, or income guarantee",
+    "Publication and unpaid inspection are not revenue"
+  ],
+  "commercialEvidence": {
+    "confirmedRevenueUSDC": 0,
+    "publicationIsRevenue": false
+  }
+}
