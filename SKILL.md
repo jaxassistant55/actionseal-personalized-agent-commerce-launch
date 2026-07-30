@@ -1,6 +1,6 @@
 ---
 name: actionseal-personalized-agent-commerce-launch
-description: Inspect and validate the live ActionSeal Personalized Agent Commerce Launch x402 service, prepare bounded public-product input, and compare its exact Base-USDC payment challenge before purchase. Use when a user wants to test the free validator, review the 12-file output contract, prepare a request for the paid POST endpoint, or make a payment decision without exposing secrets or authorizing funds prematurely.
+description: "Evaluate ActionSeal's live 20 USDC Base-mainnet x402 service: after payment, it turns public product facts into 12 buyer-specific launch and discovery files. Use for free preflight, exact POST challenge review, or an explicit purchase decision without signing or paying prematurely."
 ---
 
 # ActionSeal Personalized Agent Commerce Launch
